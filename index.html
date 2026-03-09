@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VastraAI</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="loading-spinner" class="loading-overlay">
+<div class="loader"></div>
+</div>
+
+<header class="bg-white shadow sticky top-0 z-50">
+
+<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+<h1 class="text-xl font-bold text-[#6a4f4b]">
+VastraAI
+</h1>
+
+<input id="search-bar"
+placeholder="Search sarees..."
+class="border rounded px-3 py-1 w-40 md:w-64">
+
+<div class="flex gap-6">
+
+<a href="wishlist.html" class="relative">
+<i data-lucide="heart"></i>
+<span id="wishlist-count" class="badge">0</span>
+</a>
+
+<a href="cart.html" class="relative">
+<i data-lucide="shopping-cart"></i>
+<span id="cart-count" class="badge">0</span>
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h2 class="text-4xl font-bold">
+AI Powered Saree Styling
+</h2>
+
+<p class="mt-2 mb-6">
+Discover your perfect outfit with AI stylist
+</p>
+
+<button onclick="aiSuggest()" class="bg-[#6a4f4b] text-white px-6 py-3 rounded">
+AI Stylist Suggestion
+</button>
+
+</section>
+
+<section class="max-w-7xl mx-auto mt-10 px-4">
+
+<h2 class="text-3xl font-bold text-center mb-6">
+Saree Collection
+</h2>
+
+<div id="product-grid"
+class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>
+<h3>VastraAI</h3>
+<p>AI powered fashion shopping experience.</p>
+</div>
+
+<div>
+<h4>Pages</h4>
+<a href="index.html">Home</a>
+<a href="wishlist.html">Wishlist</a>
+<a href="cart.html">Cart</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>support@vastraai.com</p>
+<p>India</p>
+</div>
+
+</div>
+
+<p class="footer-bottom">
+© 2026 VastraAI
+</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
